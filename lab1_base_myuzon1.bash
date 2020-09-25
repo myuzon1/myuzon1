@@ -27,7 +27,7 @@ yum repolist enabled
 
 #    (i) number of software packages (rpm, deb, etc) installed
 echo number of packages:
-dnf list installed | wc -l
+yum list installed | wc -l
 #RPM: $ rpm -qa --last
 #RedHat / CentOS: $ dnf list installed
 #OpenSuSE: $ zypper se --installed-only
@@ -37,7 +37,7 @@ dnf list installed | wc -l
 
 #    (j) name of software packages installed
 echo name of software packages installed
-dnf list installed
+yum list installed
 #    (k) dns server configured (which dns server(s) will be used for the local resolver)
 echo dns server
 cat /etc/resolv.conf

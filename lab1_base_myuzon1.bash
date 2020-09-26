@@ -3,24 +3,32 @@
 #    (a) Hostname
 echo hostname
 hostname
+
+
 #    (b) disk/partition size, usage, and mount points
 echo disk/partition size, usage, and mount points
 df -h
+
 #    (c) network devices (name)
 echo network devices
 nmcli device status
+
 #    (d) IP address, broadcast, and netmask for each active device
 echo IP address Broadcast  NETMASK
 ip a
+
 #    (e) OS version/release level, kernel version used
 echo release : kernel version : OS version
 uname -o -r -v
+
 #    (f) security mode (SELinux status)
 echo security mode
 sestatus
+
 #    (g) firewall configuration
 echo firewall config
-sudo iptables -vnL
+sudo iptables -vnL >/dev/null
+
 #    (h) list of active repositories
 echo list of active repositories
 yum repolist enabled

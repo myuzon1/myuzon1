@@ -60,7 +60,7 @@ echo Hardware:
 echo CPU
 lscpu
 echo main memory size   swap memory configure   devices  
-free && swapon -S
+free && swapon -s
 #    (o) services current running
 sudo systemctl | grep running
 #    (p) services installed but not running
